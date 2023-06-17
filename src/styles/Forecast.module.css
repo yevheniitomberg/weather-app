@@ -1,0 +1,240 @@
+.forecastContainer {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  font-size: 16pt;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(43, 75, 255, 0.2);
+  padding: 20px 0;
+  border-radius: 5px;
+}
+
+.currentFlexItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.emoji {
+  font-size: 25pt;
+}
+
+.imgH36 {
+  max-height: 36px;
+}
+
+.daysContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.forecastCard {
+  display: flex;
+  min-width: 250px;
+  min-height: 150px;
+  background-color: #fac;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.forecastCardLeftSide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 60%;
+  justify-content: space-around;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.forecastCardRightSide {
+  display: flex;
+  flex: 0 1 40%;
+  justify-content: center;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lowest {
+  background-color: rgba(24, 136, 255, 0.6);
+}
+
+.highest {
+  background-color: rgba(231, 74, 85, 0.6);
+}
+
+.imgInCard {
+  height: 80px;
+  align-self: center;
+}
+
+.btnShow {
+  width: 80%;
+  height: 50px;
+  margin: 10px;
+  font-size: 14pt;
+  background-color: #ffa500;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.btnShow:hover {
+  transform: scale(1.05);
+}
+
+.header {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  font-size: 16pt;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.selectdiv {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+
+  float: left;
+  min-width: 150px;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+  display: none;
+}
+
+.selectdiv:after {
+  content: "<>";
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  /*Adjust for position however you want*/
+
+  top: 18px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  /*left line */
+
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.darkMode {
+  background-color: #420647;
+}
+
+@media screen and (max-width: 940px) {
+  .flexCenter {
+    width: 100%;
+  }
+  .header:nth-child(1) {
+    order: 2;
+  }
+  .header:nth-child(2) {
+    order: 1;
+  }
+  .header:nth-child(3) {
+    order: 3;
+  }
+}
